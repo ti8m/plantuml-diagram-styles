@@ -1,0 +1,159 @@
+skinparam dpi 150
+
+skinparam default {
+    FontColor #444455
+	FontSize 14
+    FontName Arial
+	BorderColor #333344
+}
+skinparam title {
+    FontColor #444455
+	FontStyle bold
+	FontSize 28
+}
+skinparam package {
+	BorderColor #111122
+}
+skinparam sequence {
+
+    ParticipantPadding 20
+
+    MessageAlign center
+    ArrowColor #BFD700
+
+    LifeLineBackgroundColor #BFC1C2
+    LifeLineBorderColor #BFC1C2
+
+    BoxBackgroundColor #EFF2F3
+    BoxBorderColor #EFF2F3
+    BoxFontStyle italic
+    BoxFontSize 12
+    BoxFontColor #878D91
+
+    ActorBackgroundColor #A2AAB3
+    ActorBorderColor #6E7783
+
+    ParticipantFontColor #FFFFFF
+    ParticipantBackgroundColor #4E7F9E
+    ParticipantBorderColor #005A87
+    ParticipantFontStyle bold
+
+}
+skinparam {
+    DatabaseBackgroundColor white-#FBEA8C
+    DatabaseBorderColor #FFBC00
+    CloudBackgroundColor white-#AAD6E6
+    CloudBorderColor #AAD6E6
+    BoxPadding 10
+    GroupBackgroundColor red
+}
+skinparam class {
+    BackgroundColor white-#FBEA8C
+	ArrowColor #333344
+	BorderColor #333344
+	FontStyle bold
+    FontSize 16
+    StereotypeFontSize 11
+}
+skinparam enum {
+    BackgroundColor white-#FFD38C
+}
+skinparam class<<Table>> {
+    BackgroundColor white-AAD6E6
+}
+skinparam class<<Entity>> {
+    BackgroundColor white-AAD6E6
+}
+skinparam class<<MappedSuperclass>> {
+    BackgroundColor white-AFBDD9
+}
+skinparam class<<Enum>> {
+    BackgroundColor white-96BBAB
+}
+skinparam class<<Component>> {
+    BackgroundColor white-B4CFD3
+}
+skinparam component {
+    BackgroundColor white-#A8A589
+	ArrowColor #333344
+	BorderColor #333344
+	FontStyle bold
+}
+skinparam interface {
+    BackgroundColor white-#9DC209
+ 	ArrowColor #333344
+ 	BorderColor #6F9D02
+ 	FontStyle bold
+ }
+skinparam node {
+    BackgroundColor white-#F1E9D2
+	ArrowColor #333344
+	BorderColor #777788
+}
+skinparam partition {
+	ArrowColor #333344
+	BorderColor #333344
+	FontStyle bold
+}
+skinparam activity {
+    BackgroundColor white-#FBEA8C
+	ArrowColor #333344
+	BorderColor #333344
+}
+skinparam branch {
+    BackgroundColor white-#FBEA8C
+	ArrowColor #333344
+	BorderColor #333344
+}
+skinparam state {
+    BackgroundColor white-#F8DB9D
+	ArrowColor #333344
+	BorderColor #333344
+	FontStyle bold
+	FontSize 14
+}
+skinparam note {
+    BackgroundColor #FBE96C
+	BorderColor #E0B646
+}
+skinparam object {
+    BackgroundColor white-#AAD6E6
+	ArrowColor #333344
+	BorderColor #333344
+	FontStyle bold
+}
+skinparam legend {
+    BackgroundColor white-#EEEEEE
+	BorderColor #CCCCCC
+}
+skinparam interface {
+    BackgroundColor white-#AFBDD9
+}
+
+hide footbox
+
+!define Table(name,desc) class name as "desc" << (T,#AAD6E6) >> <<Table>>
+!define Table(name) class name << (T,#AAD6E6) >> <<Table>>
+
+!define Entity(name,desc) class name as "desc" << (E,#AAD6E6) >> <<Entity>>
+!define Entity(name) class name << (E,#AAD6E6) >> <<Entity>>
+
+!define Component(name,desc) class name as "desc" << (^,#ADBED1) >> <<Component>>
+!define Component(name) class name << (^,#ADBED1) >> <<Component>>
+
+!define MappedSuperclass(name) class name << (M,#AFBDD9) >> <<MappedSuperclass>>
+!define MappedSuperclass(name,desc) class name as "desc" << (M,#AFBDD9) >> <<MappedSuperclass>>
+
+!define Enum(name) class name << (E,#96BBAB) >> <<Enum>>
+!define Enum(name,desc) class name as "desc" << (E,#96BBAB) >> <<Enum>>
+
+!define primary_key(x) <&key> <b><color:#286ACD>x</color></b>
+!define foreign_key(x) <&share> <b><color:#0C7A79>x</color></b>
+!define id(x) <b>x</b>
+!define unique(x) <&tag> <b><u>x</u></b>
+!define not_null(x) <&tag> <b>x</b>
+!define column(x) <&chevron-right> <b>x</b>
+!define readonly(x) <i>x</i>
+
+!define synthetic(x) <&info> <color:#666666>x</color>
+!define reference(x) <color:#5A6E9C><u>x</u></color>
