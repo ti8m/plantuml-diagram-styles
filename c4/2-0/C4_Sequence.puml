@@ -2,7 +2,7 @@
 !if %variable_exists("RELATIVE_INCLUDE")
   !include ./C4_Component.puml
 !else
-  !include https://raw.githubusercontent.com/ti8m/plantuml-diagram-styles/refs/heads/master/c4/2-1/C4_Component.puml
+  !include https://raw.githubusercontent.com/ti8m/plantuml-diagram-styles/refs/heads/master/c4/2-0/C4_Component.puml
 !endif
 
 ' Scope: Interactions in an enterprise, software system or container.
